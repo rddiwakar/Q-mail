@@ -2,7 +2,7 @@ import Profile from "./Profile";
  
 function RecentMail({name,occupation,src,message,handleClick, id}){
     return(
-        <div onClick ={() => handleClick(id)}  >
+        <div onClick ={() => handleClick(id)} >
             <div className = "flex items-center">
                 <Profile 
                     name ={name}

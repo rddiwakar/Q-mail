@@ -1,9 +1,9 @@
 import RecentMail from "./RecentMail"
 import inboxMessages from "./data/inboxMessages";
 
-function Mail({handleClick}){
+function Mail({handleClick, messageDisplay}){
     return(
-        <div className="w-full sm:w-80 border-r-2 overflow-x-auto p-2">
+        <div className={`${messageDisplay ? "hidden" : ""} sm:block w-full sm:w-80 border-r-2 overflow-y-scroll p-2`}>
             {
                 inboxMessages.map(data => {
                     return (

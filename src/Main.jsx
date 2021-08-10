@@ -9,21 +9,34 @@ class Main extends React.Component{
     constructor(props){
         super(props)
         this.state ={
-            message:""
+            message:"",
+            messageDisplay: false
         }
         this.handleClick = this.handleClick.bind(this)
+        // this.handleShowInbox = this.handleShowInbox(this);
     }
     handleClick(id) {        
         const message =inboxMessages.find(data => data.id === id);
-        this.setState({message})
+        this.setState({
+            message,
+            messageDisplay: true,
+        })
     }
+
+    handleShowInbox = () => {
+        console.log("handleShowInbox called");
+        this.setState({
+            messageDisplay: false,
+        });
+    }
+
     render(){
         return(
             <div className="h-screen pt-20 flex">
                 <SidebarMenu />
                 <MailBox />
-                <Mail handleClick = {this.handleClick}/>
-                <Message messageData ={this.state.message}/>
+                <Mail handleClick = {this.handleClick} messageDisplay={this.state.messageDisplay} />
+                <Message messageData ={this.state.message} handleShowInbox={this.handleShowInbox} messageDisplay={this.state.messageDisplay} />
             </div>
         )
     }

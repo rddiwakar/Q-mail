@@ -6,9 +6,10 @@ import SendIcon from "remixicon-react/SendPlaneFillIcon";
 import LabelIcon from "remixicon-react/CheckboxBlankCircleLineIcon";
 import Profile from "./Profile";
 import MailBoxLink from "./MailBoxLink";
+
  const MailBox = ()=>{
     return(
-        <div className="hidden lg:block w-60 border-r-2 overflow-x-auto">
+        <div className="hidden lg:block w-60 border-r-2 overflow-y-scroll">
             <section className="mb-8">
                 <h1 className="border-b-2 text-center p-2 ">MailBox</h1>
                 <div>
