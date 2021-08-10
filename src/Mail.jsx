@@ -1,12 +1,22 @@
 import RecentMail from "./RecentMail"
+import inboxMessages from "./data/inboxMessages";
+
 function Mail(){
     return(
         <div className="w-full sm:w-80 border-r-2 overflow-x-auto">
-           <RecentMail 
-                name="Swastik"
-                occupation="Software Developer"
-                src = "https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"
-           /> 
+            {
+                inboxMessages.map(data => {
+                    return (
+                        <RecentMail
+                            key={data.id}
+                            name={data.name}
+                            occupation={data.designation}
+                            src = {data.image}
+                            message={data.message}
+                        /> 
+                    )
+                })
+            }
         </div>
     )
 }
