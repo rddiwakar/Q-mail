@@ -16,6 +16,7 @@ import MailBoxLink from "./MailBoxLink";
                         Icon = {InboxIcon}
                         iconName = "Inbox"
                         count = "6"
+                        pt="pt-4"
                     />
                     <MailBoxLink 
                         Icon = {DraftIcon}
@@ -46,6 +47,7 @@ import MailBoxLink from "./MailBoxLink";
                         Icon = {LabelIcon}
                         iconName = "Bussiness"
                         count = "8"
+                        pt="pt-4"
                     />
                     <MailBoxLink 
                         Icon = {LabelIcon}
