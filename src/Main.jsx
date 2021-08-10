@@ -32,7 +32,7 @@ class Main extends React.Component{
 
     render(){
         return(
-            <div className="h-screen pt-20 flex">
+            <div className="h-screen pt-20 flex justify-between">
                 <SidebarMenu />
                 <MailBox />
                 <Mail handleClick = {this.handleClick} messageDisplay={this.state.messageDisplay} />
