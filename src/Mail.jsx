@@ -3,7 +3,7 @@ import inboxMessages from "./data/inboxMessages";
 
 function Mail({handleClick}){
     return(
-        <div className="w-full sm:w-80 border-r-2 overflow-x-auto">
+        <div className="w-full sm:w-80 border-r-2 overflow-x-auto p-2">
             {
                 inboxMessages.map(data => {
                     return (
