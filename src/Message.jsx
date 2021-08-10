@@ -5,7 +5,7 @@ function Message({messageData}){
         <>
             {
                 name ? (
-                    <section className = "hidden sm:block w-1/2 p-8 overflow-y-scroll">
+                    <section className = "hidden sm:block w-1/2 p-8">
                         <div className= "flex justify-start items-center border-b-2 mb-4 pb-2">
                             <img width="50" src={image} className="rounded-full" alt="profile"/>
                             <div className="pl-6">
@@ -17,7 +17,7 @@ function Message({messageData}){
                         <p className =" text-sm " >{message}</p>
                     </section>
                 ) : (
-                    <p className="m-auto">There is nothing to show here. Select a message from inbox</p>
+                    <p className="hidden sm:block m-auto">There is nothing to show here. Select a message from inbox</p>
                 )
             }
         </>
