@@ -4,59 +4,61 @@ import DraftIcon from "remixicon-react/DraftLineIcon";
 import FavouriteIcon from "remixicon-react/StarLineIcon";
 import SendIcon from "remixicon-react/SendPlaneFillIcon";
 import LabelIcon from "remixicon-react/CheckboxBlankCircleLineIcon";
-import Profile from "./Profile"
+import Profile from "./Profile";
+import MailBoxLink from "./MailBoxLink";
  const MailBox = ()=>{
     return(
         <div className="hidden lg:block w-60 border-r-2 overflow-x-auto">
             <section className="mb-8">
-                <h1 className="border-b-2 text-center p-2">MailBox</h1>
-                <ul>
-                    <li className="flex justify-between items-center p-2 pr-6 pl-6 pt-4">
-                        <InboxIcon/>
-                        <div>Inbox</div>
-                        <div>6</div>
-                    </li>
-                    <li className="flex justify-between items-center p-2 pr-6 pl-6">
-                        <DraftIcon/>
-                        <div>Drafts</div>
-                        <div>4</div>
-                    </li>
-                    <li className="flex justify-between items-center p-2 pr-6 pl-6">
-                        <FavouriteIcon/>
-                        <div>Favourite</div>
-                        <div>2</div>
-                    </li>
-                    <li className="flex justify-between items-center p-2 pr-6 pl-6">
-                        <SendIcon/>
-                        <div>SendItem</div>
-                        <div>6</div>
-                    </li>
-                    <li className="flex justify-between items-center p-2 pr-6 pl-6">
-                        <DeletedIcon/>
-                        <div>Deleted</div>
-                        <div>3</div>
-                    </li>
-                </ul>
+                <h1 className="border-b-2 text-center p-2 ">MailBox</h1>
+                <div>
+                    <MailBoxLink 
+                        Icon = {InboxIcon}
+                        iconName = "Inbox"
+                        count = "6"
+                    />
+                    <MailBoxLink 
+                        Icon = {DraftIcon}
+                        iconName = "Drafts"
+                        count = "4"
+                    />
+                    <MailBoxLink 
+                        Icon = {FavouriteIcon}
+                        iconName = "Favourite"
+                        count = "2"
+                    />
+                    <MailBoxLink 
+                        Icon = {SendIcon}
+                        iconName = "SendItem"
+                        count = "6"
+                    />
+                    <MailBoxLink 
+                        Icon = {DeletedIcon}
+                        iconName = "Deleted"
+                        count = "3"
+                    />
+                </div>
             </section>
             <section className="mb-8">
             <h1 className="border-b-2 text-center p-2">Label</h1>
-                <ul>
-                    <li className="flex justify-between items-center pt-4 pr-6 pl-6 pb-2">
-                        <LabelIcon/>
-                        <div>Bussiness</div>
-                        <div>8</div>
-                    </li>
-                    <li className="flex justify-between items-center pr-6 pl-6 pb-2">
-                        <LabelIcon/>
-                        <div>Social</div>
-                        <div>6</div>
-                    </li>
-                    <li className="flex justify-between items-center pr-6 pl-6 pb-2">
-                        <LabelIcon/>
-                        <div>Public</div>
-                        <div>5</div>
-                    </li>
-                </ul>
+                <div>
+                    <MailBoxLink 
+                        Icon = {LabelIcon}
+                        iconName = "Bussiness"
+                        count = "8"
+                    />
+                    <MailBoxLink 
+                        Icon = {LabelIcon}
+                        iconName = "Social"
+                        count = "6"
+                    />
+                    <MailBoxLink 
+                        Icon = {LabelIcon}
+                        iconName = "Public"
+                        count = "5"
+                    />
+                    
+                </div>
             </section>
             <section className="mb-8">
             <h1 className="border-b-2 text-center p-2 mb-2">Contact</h1>
