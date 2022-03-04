@@ -24,7 +24,6 @@ class Main extends React.Component{
     }
 
     handleShowInbox = () => {
-        console.log("handleShowInbox called");
         this.setState({
             messageDisplay: false,
         });
